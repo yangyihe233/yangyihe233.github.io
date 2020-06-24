@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+<html lang="cn" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>mac终端常用命令 - 盒子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="yangyihe,"> 
+    <meta name="description" content="日常生活碎碎念，平时技术整理和分享,基本命令:
+1、列出文件1234$ ls 参数 目录名例: 看看驱动目录下有什么:ls /System/Library/Extensions(参数 -w 显示中文，-l 详细信息， -a 包括隐藏文,"> 
+    <meta name="author" content="杨一盒"> 
+    <link rel="alternative" href="atom.xml" title="盒子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">盒子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://www.danboard.me"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">mac终端常用命令</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">mac终端常用命令</h1>
+        <div class="stuff">
+            <span>六月 24, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/hacker/" rel="tag">hacker</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令:"></a>基本命令:</h3><hr>
+<h4 id="1、列出文件"><a href="#1、列出文件" class="headerlink" title="1、列出文件"></a>1、列出文件</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ls 参数 目录名</span><br><span class="line"></span><br><span class="line">例: 看看驱动目录下有什么<span class="symbol">:ls</span> /System/Library/Extensions</span><br><span class="line">(参数 -w 显示中文，-l 详细信息， -a 包括隐藏文件)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、转换目录"><a href="#2、转换目录" class="headerlink" title="2、转换目录"></a>2、转换目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span>    </span><br><span class="line"></span><br><span class="line">例：想到驱动目录下溜达一圈   <span class="built_in">cd</span> /System/Library/Extensions</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、建立新目录"><a href="#3、建立新目录" class="headerlink" title="3、建立新目录"></a>3、建立新目录</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir 目录名     </span><br><span class="line"></span><br><span class="line">例：在驱动目录下建一个备份目录 backup     mkdir /System/Library/Extensions/backup</span><br><span class="line">在桌面上建一个备份目录 backup    mkdir /User/用户名/Desktop/backup</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、拷贝文件"><a href="#4、拷贝文件" class="headerlink" title="4、拷贝文件"></a>4、拷贝文件</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ cp 参数 源文件 目标文件    </span><br><span class="line"></span><br><span class="line">例：想把桌面的Natit.kext 拷贝到驱动目录中  cp -R /User/用户名/Desktop/Natit.kext /System/Library/Extensions</span><br><span class="line">参数R表示对目录进行递归操作，kext在图形界面下看起来是个文件，实际上是个文件夹。</span><br><span class="line">把驱动目录下的所有文件备份到桌面backup</span><br><span class="line"></span><br><span class="line">$ cp -R /System/Library/Extensions/* <span class="regexp">/User/</span>用户名/Desktop/backup</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、删除文件-文件夹"><a href="#5、删除文件-文件夹" class="headerlink" title="5、删除文件/文件夹:"></a>5、删除文件/文件夹:</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ rm 参数 文件   </span><br><span class="line">$ rmdir 文件夹</span><br><span class="line"></span><br><span class="line">例：想删除驱动的缓存  </span><br><span class="line"></span><br><span class="line">$ rm -rf /System/Library/Extensions.kextcache     </span><br><span class="line">$ rm -rf /System/Library/Extensions.mkext</span><br><span class="line">参数－rf 表示递归和强制，千万要小心使用，如果执行了 rm -rf / 你的系统就全没了</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、移动文件"><a href="#6、移动文件" class="headerlink" title="6、移动文件:"></a>6、移动文件:</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ mv 文件   </span><br><span class="line"></span><br><span class="line">例：想把AppleHDA.Kext 移到桌面    </span><br><span class="line"></span><br><span class="line">$ mv /System/Library/Extensions/AppleHDA.kext /User/用户名/Desktop</span><br><span class="line"></span><br><span class="line">例: 想把AppleHDA.Kext 移到备份目录中   </span><br><span class="line">$ mv /System/Library/Extensions/AppleHDA.kext /System/Library/Extensions/backup</span><br></pre></td></tr></table></figure>
+
+<h4 id="7、文本编辑"><a href="#7、文本编辑" class="headerlink" title="7、文本编辑:"></a>7、文本编辑:</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ nano 文件名   </span><br><span class="line"></span><br><span class="line">例：编辑 natit 的 Info.plist     </span><br><span class="line"></span><br><span class="line">$ nano /System/Library/Extensions/Natit.kext/Info.plist</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作:"></a>目录操作:</h4><p>|命令名|功能描述|使用举例<br> |:<br> |mkdir|创建一个目录|mkdir dirname<br> |rmdir|删除一个目录|rmdir dirname<br> |mvdir|移动或重命名一个目录|mvdir dir1 dir2<br> |cd|改变当前目录|cd dirname<br> |pwd|显示当前目录的路径名|pwd<br> |ls|显示当前目录的内容|ls -la</p>
+<h4 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作:"></a>文件操作:</h4><p>|命令名|功能描述|使用举例<br> |:<br> |cat|显示或连接文件|cat filename<br> |od|显示非文本文件的内容|od -c filename<br> |cp|复制文件或目录|cp file1 file2<br> |rm|删除文件或目录|rm filename<br> |mv|改变文件名或所在目录|mv file1 file2<br> |find|使用匹配表达式查找文件|find . -name “*.c” -print<br> |file|显示文件类型|file filename</p>
+<h4 id="选择操作"><a href="#选择操作" class="headerlink" title="选择操作:"></a>选择操作:</h4><p>|命令名|功能描述|使用举例<br> |:<br> |head|显示文件的最初几行|head -20 filename<br> |tail|显示文件的最后几行|tail -15 filename<br> |cut|显示文件每行中的某些域|cut -f1,7 -d: /etc/passwd<br> |colrm|从标准输入中删除若干列|colrm 8 20 file2<br> |diff|比较并显示两个文件的差异|diff file1 file2<br> |sort|排序或归并文件|sort -d -f -u file1<br> |uniq|去掉文件中的重复行|uniq file1 file2<br> |comm|显示两有序文件的公共和非公共行|comm file1 file2<br> |wc|统计文件的字符数、词数和行数|wc filename<br> |nl|给文件加上行号|nl file1 &gt;file2</p>
+<h4 id="进程操作"><a href="#进程操作" class="headerlink" title="进程操作:"></a>进程操作:</h4><p>|命令名|功能描述|使用举例<br> |:<br> |ps|显示进程当前状态|ps u<br> |kill|终止进程|kill -9 30142</p>
+<h4 id="时间操作"><a href="#时间操作" class="headerlink" title="时间操作:"></a>时间操作:</h4><p>|命令名|功能描述|使用举例<br> |:<br> |date|显示系统的当前日期和时间|date<br> |cal|显示日历|cal 8 1996<br> |time|统计程序的执行时间|time a.out</p>
+<h4 id="网络与通信操作"><a href="#网络与通信操作" class="headerlink" title="网络与通信操作:"></a>网络与通信操作:</h4><p>|命令名|功能描述|使用举例<br> |:<br> |telnet|远程登录|telnet hpc.sp.net.edu.cn<br> |rlogin|远程登录|rlogin hostname -l username<br> |rsh|在远程主机执行指定命令|rsh f01n03 date<br> |ftp|在本地主机与远程主机之间传输文件|ftpftp.sp.net.edu.cn<br> |rcp|在本地主机与远程主机 之间复制文件|rcp file1 host1:file2<br> |ping|给一个网络主机发送 回应请求|ping hpc.sp.net.edu.cn<br> |mail|阅读和发送电子邮件|mail<br> |write|给另一用户发送报文|write username pts/1<br> |mesg|允许或拒绝接收报文|mesg n</p>
+<h4 id="Korn-Shell-命令"><a href="#Korn-Shell-命令" class="headerlink" title="Korn Shell 命令:"></a>Korn Shell 命令:</h4><p>|命令名|功能描述|使用举例<br> |:<br> |history|列出最近执行过的 几条命令及编号|history<br> |r|重复执行最近执行过的 某条命令|r -2<br> |alias|给某个命令定义别名|alias del=rm -i<br> |unalias|取消对某个别名的定义|unalias del</p>
+<h4 id="其它命令"><a href="#其它命令" class="headerlink" title="其它命令:"></a>其它命令:</h4><p>|命令名|功能描述|使用举例<br> |:<br> |uname|显示操作系统的有关信息|uname -a<br> |clear|清除屏幕或窗口内容|clear<br> |env|显示当前所有设置过的环境变量|env<br> |who|列出当前登录的所有用户|who<br> |whoami|显示当前正进行操作的用户名|whoami<br> |tty|显示终端或伪终端的名称|tty<br> |stty|显示或重置控制键定义|stty -a<br> |du|查询磁盘使用情况|du -k subdir|<br> |df /tmp|显示文件系统的总空间和可用空间|空<br> |w|显示当前系统活动的总信息|空</p>
+<hr>
+<h3 id="使用终端命令开启系统功能"><a href="#使用终端命令开启系统功能" class="headerlink" title="使用终端命令开启系统功能:"></a>使用终端命令开启系统功能:</h3><h4 id="1-显示资源库"><a href="#1-显示资源库" class="headerlink" title="1.显示资源库:"></a>1.显示资源库:</h4><h4 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; 显示<span class="symbol">:</span></span><br><span class="line">在“终端”中输入下面的命令：</span><br><span class="line"></span><br><span class="line">$ chflags nohidden ~<span class="regexp">/Library/</span></span><br><span class="line"></span><br><span class="line">&gt; 隐藏<span class="symbol">:</span></span><br><span class="line">在“终端”中输入下面的命令：</span><br><span class="line"></span><br><span class="line">$ chflags hidden ~<span class="regexp">/Library/</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">打开Finder，菜单中选择<span class="string">'前往'</span>按住<span class="string">'option'</span>键就会显示资源库项。</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-Finder显示隐藏文件"><a href="#2-Finder显示隐藏文件" class="headerlink" title="2.Finder显示隐藏文件:"></a>2.Finder显示隐藏文件:</h4><h4 id="显示隐藏文件"><a href="#显示隐藏文件" class="headerlink" title="显示隐藏文件:"></a>显示隐藏文件:</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在“终端”中输入下面的命令：</span><br><span class="line"></span><br><span class="line">$ defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">true</span></span><br><span class="line">$ killall Finder</span><br></pre></td></tr></table></figure>
+
+<h4 id="恢复隐藏文件"><a href="#恢复隐藏文件" class="headerlink" title="恢复隐藏文件:"></a>恢复隐藏文件:</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在“终端”中输入下面的命令：</span><br><span class="line"></span><br><span class="line">$ defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">false</span></span><br><span class="line">$ killall Finder</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-在Finder标题栏显示完整路径"><a href="#3-在Finder标题栏显示完整路径" class="headerlink" title="3.在Finder标题栏显示完整路径:"></a>3.在Finder标题栏显示完整路径:</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在“终端”中输入下面的命令：</span><br><span class="line"></span><br><span class="line">$ defaults write com.apple.finder _FXShowPosixPathInTitle -<span class="keyword">bool</span> <span class="literal">YES</span></span><br><span class="line">$killall Finder</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-卸载Xcode"><a href="#4-卸载Xcode" class="headerlink" title="4.卸载Xcode"></a>4.卸载Xcode</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">默认情况下Xcode安装在/Developer目录下，即可执行如下命令<span class="symbol">:</span></span><br><span class="line">在“终端”中输入下面的命令：</span><br><span class="line"></span><br><span class="line">$ sudo /Developer/Library/uninstall-devtools –mode=all</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-去掉窗口截屏的阴影"><a href="#5-去掉窗口截屏的阴影" class="headerlink" title="5.去掉窗口截屏的阴影:"></a>5.去掉窗口截屏的阴影:</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">默认的对窗口进行截屏的时候(快捷键<span class="string">'Command-Shift-4'</span>)，得到的图片周围会自动被加上一圈阴影。</span><br><span class="line">如果不喜欢这个阴影的效果，就可以把它关掉。</span><br><span class="line">在“终端”中输入下面的命令：</span><br><span class="line"></span><br><span class="line">$ defaults write com.apple.screencapture disable-shadow -bool <span class="literal">true</span></span><br><span class="line">$ killall SystemUIServer</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-改变截屏图片的保存位置"><a href="#6-改变截屏图片的保存位置" class="headerlink" title="6.改变截屏图片的保存位置:"></a>6.改变截屏图片的保存位置:</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在“终端” 中输入下面的命令<span class="symbol">:</span></span><br><span class="line"></span><br><span class="line">$ defaults write com.apple.screencapture location 存放位置</span><br><span class="line">$ killall SystemUIServer</span><br><span class="line"></span><br><span class="line">在输入命令的时候，将“存放位置”替换成其他文件夹的名字就可以了</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Mac-终端命令大全"><a href="#Mac-终端命令大全" class="headerlink" title="Mac 终端命令大全"></a>Mac 终端命令大全</h1><h3 id="目录操作-1"><a href="#目录操作-1" class="headerlink" title="目录操作"></a>目录操作</h3><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mkdir</td>
+<td>创建一个目录</td>
+<td>mkdir dirname</td>
+</tr>
+<tr>
+<td>rmdir</td>
+<td>删除一个目录</td>
+<td>rmdir dirname</td>
+</tr>
+<tr>
+<td>mvdir</td>
+<td>移动或重命名一个目录</td>
+<td>mvdir dir1 dir2</td>
+</tr>
+<tr>
+<td>cd</td>
+<td>改变当前目录</td>
+<td>cd dirname</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>显示当前目录的路径名</td>
+<td>pwd</td>
+</tr>
+<tr>
+<td>ls</td>
+<td>显示当前目录的内容</td>
+<td>ls -la</td>
+</tr>
+<tr>
+<td>dircmp</td>
+<td>比较两个目录的内容</td>
+<td>dircmp dir1 dir2</td>
+</tr>
+</tbody></table>
+<h4 id="文件操作-1"><a href="#文件操作-1" class="headerlink" title="文件操作"></a>文件操作</h4><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cat</td>
+<td>显示或连接文件</td>
+<td>cat filename</td>
+</tr>
+<tr>
+<td>pg</td>
+<td>分页格式化显示文件内容</td>
+<td>pg filename</td>
+</tr>
+<tr>
+<td>more</td>
+<td>分屏显示文件内容</td>
+<td>more filename</td>
+</tr>
+<tr>
+<td>od</td>
+<td>显示非文本文件的内容</td>
+<td>od -c filename</td>
+</tr>
+<tr>
+<td>cp</td>
+<td>复制文件或目录</td>
+<td>cp file1 file2</td>
+</tr>
+<tr>
+<td>rm</td>
+<td>删除文件或目录</td>
+<td>rm filename</td>
+</tr>
+<tr>
+<td>mv</td>
+<td>改变文件名或所在目录</td>
+<td>mv file1 file2</td>
+</tr>
+<tr>
+<td>ln</td>
+<td>联接文件</td>
+<td>ln -s file1 file2</td>
+</tr>
+<tr>
+<td>find</td>
+<td>使用匹配表达式查找文件</td>
+<td>find . -name “*.c” -print</td>
+</tr>
+<tr>
+<td>file</td>
+<td>显示文件类型</td>
+<td>file filename</td>
+</tr>
+<tr>
+<td>open</td>
+<td>使用默认的程序打开文件</td>
+<td>open filename</td>
+</tr>
+</tbody></table>
+<h3 id="选择操作-1"><a href="#选择操作-1" class="headerlink" title="选择操作"></a>选择操作</h3><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>head</td>
+<td>显示文件的最初几行</td>
+<td>head -20 filename</td>
+</tr>
+<tr>
+<td>tail</td>
+<td>显示文件的最后几行</td>
+<td>tail -15 filename</td>
+</tr>
+<tr>
+<td>cut</td>
+<td>显示文件每行中的某些域</td>
+<td>cut -f1,7 -d: /etc/passwd</td>
+</tr>
+<tr>
+<td>colrm</td>
+<td>从标准输入中删除若干列</td>
+<td>colrm 8 20 file2</td>
+</tr>
+<tr>
+<td>paste</td>
+<td>横向连接文件</td>
+<td>paste file1 file2</td>
+</tr>
+<tr>
+<td>diff</td>
+<td>比较并显示两个文件的差异</td>
+<td>diff file1 file2</td>
+</tr>
+<tr>
+<td>sed</td>
+<td>非交互方式流编辑器</td>
+<td>sed “s/red/green/g” filename</td>
+</tr>
+<tr>
+<td>grep</td>
+<td>在文件中按模式查找</td>
+<td>grep “^[a-zA-Z]” filename</td>
+</tr>
+<tr>
+<td>awk</td>
+<td>在文件中查找并处理模式</td>
+<td>awk ‘{print $1 $1}’ filename</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>排序或归并文件</td>
+<td>sort -d -f -u file1</td>
+</tr>
+<tr>
+<td>uniq</td>
+<td>去掉文件中的重复行</td>
+<td>uniq file1 file2</td>
+</tr>
+<tr>
+<td>comm</td>
+<td>显示两有序文件的公共和非公共行</td>
+<td>comm file1 file2</td>
+</tr>
+<tr>
+<td>wc</td>
+<td>统计文件的字符数、词数和行数</td>
+<td>wc filename</td>
+</tr>
+<tr>
+<td>nl</td>
+<td>给文件加上行号</td>
+<td>nl file1 &gt;file2</td>
+</tr>
+</tbody></table>
+<h3 id="安全操作"><a href="#安全操作" class="headerlink" title="安全操作"></a>安全操作</h3><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>passwd</td>
+<td>修改用户密码</td>
+<td>passwd</td>
+</tr>
+<tr>
+<td>chmod</td>
+<td>改变文件或目录的权限</td>
+<td>chmod ug+x filename</td>
+</tr>
+<tr>
+<td>umask</td>
+<td>定义创建文件的权限掩码</td>
+<td>umask 027</td>
+</tr>
+<tr>
+<td>chown</td>
+<td>改变文件或目录的属主</td>
+<td>chown newowner filename</td>
+</tr>
+<tr>
+<td>chgrp</td>
+<td>改变文件或目录的所属组</td>
+<td>chgrp staff filename</td>
+</tr>
+<tr>
+<td>xlock</td>
+<td>给终端上锁</td>
+<td>xlock -remote</td>
+</tr>
+</tbody></table>
+<h3 id="编程操作"><a href="#编程操作" class="headerlink" title="编程操作"></a>编程操作</h3><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>make</td>
+<td>维护可执行程序的最新版本</td>
+<td>make</td>
+</tr>
+<tr>
+<td>touch</td>
+<td>更新文件的访问和修改时间</td>
+<td>touch -m 05202400 filename</td>
+</tr>
+<tr>
+<td>dbx</td>
+<td>命令行界面调试工具</td>
+<td>dbx a.out</td>
+</tr>
+<tr>
+<td>xde</td>
+<td>图形用户界面调试工具</td>
+<td>xde a.out</td>
+</tr>
+</tbody></table>
+<h3 id="进程操作-1"><a href="#进程操作-1" class="headerlink" title="进程操作"></a>进程操作</h3><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ps</td>
+<td>显示进程当前状态</td>
+<td>ps u</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>终止进程</td>
+<td>kill -9 30142</td>
+</tr>
+<tr>
+<td>nice</td>
+<td>改变待执行命令的优先级</td>
+<td>nice cc -c *.c</td>
+</tr>
+<tr>
+<td>renice</td>
+<td>改变已运行进程的优先级</td>
+<td>renice +20 32768</td>
+</tr>
+</tbody></table>
+<h3 id="时间操作-1"><a href="#时间操作-1" class="headerlink" title="时间操作"></a>时间操作</h3><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>date</td>
+<td>显示系统的当前日期和时间</td>
+<td>date</td>
+</tr>
+<tr>
+<td>cal</td>
+<td>显示日历</td>
+<td>cal 8 1996</td>
+</tr>
+<tr>
+<td>time</td>
+<td>统计程序的执行时间</td>
+<td>time a.out</td>
+</tr>
+</tbody></table>
+<h3 id="网络与通信操作-1"><a href="#网络与通信操作-1" class="headerlink" title="网络与通信操作"></a>网络与通信操作</h3><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>telnet</td>
+<td>远程登录</td>
+<td>telnet hpc.sp.net.edu.cn</td>
+</tr>
+<tr>
+<td>rlogin</td>
+<td>远程登录</td>
+<td>rlogin hostname -l username</td>
+</tr>
+<tr>
+<td>rsh</td>
+<td>在远程主机执行指定命令</td>
+<td>rsh f01n03 date</td>
+</tr>
+<tr>
+<td>ftp</td>
+<td>在本地主机与远程主机之间传输文件</td>
+<td>ftp ftp.sp.net.edu.cn</td>
+</tr>
+<tr>
+<td>rcp</td>
+<td>在本地主机与远程主机 之间复制文件</td>
+<td>rcp file1 host1:file2</td>
+</tr>
+<tr>
+<td>ping</td>
+<td>给一个网络主机发送 回应请求</td>
+<td>ping hpc.sp.net.edu.cn</td>
+</tr>
+<tr>
+<td>mail</td>
+<td>阅读和发送电子邮件</td>
+<td>mail</td>
+</tr>
+<tr>
+<td>write</td>
+<td>给另一用户发送报文</td>
+<td>write username pts/1</td>
+</tr>
+<tr>
+<td>mesg</td>
+<td>允许或拒绝接收报文</td>
+<td>mesg n</td>
+</tr>
+</tbody></table>
+<h3 id="Korn-Shell-命令-1"><a href="#Korn-Shell-命令-1" class="headerlink" title="Korn Shell 命令"></a>Korn Shell 命令</h3><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>history</td>
+<td>列出最近执行过的 几条命令及编号</td>
+<td>history</td>
+</tr>
+<tr>
+<td>r</td>
+<td>重复执行最近执行过的 某条命令</td>
+<td>r -2</td>
+</tr>
+<tr>
+<td>alias</td>
+<td>给某个命令定义别名</td>
+<td>alias del=rm -i</td>
+</tr>
+<tr>
+<td>unalias</td>
+<td>取消对某个别名的定义</td>
+<td>unalias del</td>
+</tr>
+</tbody></table>
+<h3 id="其它命令-1"><a href="#其它命令-1" class="headerlink" title="其它命令"></a>其它命令</h3><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>uname</td>
+<td>显示操作系统的有关信息</td>
+<td>uname -a</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>清除屏幕或窗口内容</td>
+<td>clear</td>
+</tr>
+<tr>
+<td>env</td>
+<td>显示当前所有设置过的环境变量</td>
+<td>env</td>
+</tr>
+<tr>
+<td>who</td>
+<td>列出当前登录的所有用户</td>
+<td>who</td>
+</tr>
+<tr>
+<td>whoami</td>
+<td>显示当前正进行操作的用户名</td>
+<td>whoami</td>
+</tr>
+<tr>
+<td>tty</td>
+<td>显示终端或伪终端的名称</td>
+<td>tty</td>
+</tr>
+<tr>
+<td>stty</td>
+<td>显示或重置控制键定义</td>
+<td>stty -a</td>
+</tr>
+<tr>
+<td>du</td>
+<td>查询磁盘使用情况</td>
+<td>du -k subdir</td>
+</tr>
+<tr>
+<td>df</td>
+<td>显示文件系统的总空间和可用空间</td>
+<td>df /tmp</td>
+</tr>
+<tr>
+<td>w</td>
+<td>显示当前系统活动的总信息</td>
+<td>w</td>
+</tr>
+</tbody></table>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://res.wx.qq.com/voice/getvoice?mediaid=MzI1NzIxNDAxNF81MDI2ODExODM='></li>
+                        
+                    
+                        
+                            <li title='1' data-url='https://res.wx.qq.com/voice/getvoice?mediaid=MzI1NzIxNDAxNF81MDI2ODExODQ='></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
