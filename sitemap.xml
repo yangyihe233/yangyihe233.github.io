@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.danboard.me/tags/index.html</loc>
+    
+    <lastmod>2020-06-24T09:53:52.506Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.danboard.me/categories/index.html</loc>
+    
+    <lastmod>2020-06-24T09:46:47.679Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.danboard.me/hello-world/</loc>
     
     <lastmod>2020-06-24T09:31:45.560Z</lastmod>
@@ -33,20 +47,6 @@
     <loc>http://www.danboard.me/mac%E4%B8%8Bshell%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2020-06-24T09:04:49.820Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.danboard.me/tags/index.html</loc>
-    
-    <lastmod>2020-06-24T09:01:11.017Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.danboard.me/categories/index.html</loc>
-    
-    <lastmod>2020-06-24T09:00:48.809Z</lastmod>
     
   </url>
   
