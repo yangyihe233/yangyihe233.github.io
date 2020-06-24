@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="cn" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>mac下shell命令 - 盒子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="yangyihe,"> 
+    <meta name="description" content="日常生活碎碎念，平时技术整理和分享,使用linux，mac工具的时候，熟悉各种常用的shell命令，还是非常有帮助的。
+故从网络整理了相关命令，整合在了一起，侵删。
+
+1.wget 与 curlwget/curl都为下载文件命令，但是,"> 
+    <meta name="author" content="杨一盒"> 
+    <link rel="alternative" href="atom.xml" title="盒子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">盒子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://www.danboard.me"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">mac下shell命令</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">mac下shell命令</h1>
+        <div class="stuff">
+            <span>六月 24, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <p>使用linux，mac工具的时候，熟悉各种常用的shell命令，还是非常有帮助的。</p>
+<p>故从网络整理了相关命令，整合在了一起，侵删。</p>
+<p><img src="https://sponsor.segmentfault.com/lg.php?bannerid=0&campaignid=0&zoneid=25&loc=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000005855195&cb=325048fce2" alt="img"></p>
+<h3 id="1-wget-与-curl"><a href="#1-wget-与-curl" class="headerlink" title="1.wget 与 curl"></a>1.wget 与 curl</h3><p>wget/curl都为下载文件命令，但是使用的平台不一样。</p>
+<p>wget命令可以在Linux下使用，但是MacOS x不自带wget，不过可以在Mac下用curl，如果需要使用wget命令，则需要安装，这里我们在Mac平台默认使用curl命令下载文件。</p>
+<p>Mac平台使用wget会找不到命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MacdeMacBook-Pro-3:python mac$ wget http:&#x2F;&#x2F;labfile.oss.aliyuncs.com&#x2F;courses&#x2F;499&#x2F;lab2.zip</span><br><span class="line">-bash: wget: command not found</span><br></pre></td></tr></table></figure>
+
+<p><strong>关于curl工具介绍：</strong><br><strong>curl</strong> 是一个传输文件（上传/下载）的命令行工具，它支持FTP, FTPS, HTTP, HTTPS, SCP, SFTP, TFTP, TELNET, DICT, FILE 和 LDAP 等多种协议。在 Mac OS X 里已经预装了curl，主要用它来下载文件。</p>
+<p><strong>基本用法：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">curl [选项][下载地址]</span><br><span class="line"></span><br><span class="line">curl命令参数：</span><br><span class="line">curl &#39;url地址&#39;</span><br><span class="line">curl [选项] &#39;url地址&#39;</span><br><span class="line">curl -O &#39;url&#39;</span><br><span class="line">curl -L -O &#39;url&#39;</span><br><span class="line">curl -o output.file.name.here &#39;url-here&#39;</span><br><span class="line">curl -o foo.pdf &#39;http:&#x2F;&#x2F;server1.cyberciti.biz&#x2F;foo.pdf&#39;</span><br></pre></td></tr></table></figure>
+
+<p>如果你只是指定网络地址，而没有使用其它选项，那么将直接在屏幕上显示文件的内容,这里，压缩的文件会以乱码显示在屏幕：<br><img src="https://segmentfault.com/img/bVyJpU?w=655&h=36" alt="图片描述"></p>
+<p><strong>curl示例：</strong><br>从服务器aliyuncs下载lab2.zip文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o mylab2.zip http:&#x2F;&#x2F;labfile.oss.aliyuncs.com&#x2F;courses&#x2F;499&#x2F;lab2.zip</span><br></pre></td></tr></table></figure>
+
+<p>选项 “-o”会将输出写入到指定的文件mylab2.zip里<br><img src="https://segmentfault.com/img/bVyJpn?w=747&h=88" alt="图片描述"></p>
+<p><strong>解压文件：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip mylab2.zip</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://segmentfault.com/img/bVyJpI?w=481&h=105" alt="图片描述"></p>
+<h3 id="2-apt-get与brew"><a href="#2-apt-get与brew" class="headerlink" title="2.apt-get与brew"></a>2.apt-get与brew</h3><p>由于之前接触过Ubuntu的系统，所以比较熟悉一个便捷的安装软件包的命令sudo apt-get install xxx，一直觉得Mac也是Linux的系统和Ubuntu的区别应该不大，然而今天使用命令sudo apt-get install libxml2时Mac系统却报出了-bash:apt-get:command not found 这样的错误，后来上网查询才知道，原来apt-get是debian(Ubuntu)才有的包管理器，遂继续查询解决方案。</p>
+<p><strong>解决方案：使用brew代替apt-get</strong></p>
+<p>What is brew?</p>
+<p>brew 全称Homebrew，是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件。</p>
+<p>如何安装？</p>
+<p>安装只需要在终端下输入下面一条命令（Mac自带ruby不需要安装）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后使用brew install libxml2即可。如需查看brew的更多功能请使用brew –help查看其帮助文档。</p>
+<p>安装mcrypt插件示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MacdeMacBook-Pro-3:StuGrade mac$ brew search mcrypt</span><br><span class="line">MacdeMacBook-Pro-3:StuGrade mac$ brew install mcrypt</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、npm和cnpm国内镜像"><a href="#4、npm和cnpm国内镜像" class="headerlink" title="4、npm和cnpm国内镜像"></a>4、npm和cnpm国内镜像</h4><p>在国内使用npm非常慢，不过还好，我们可以使用淘宝提供的镜像来安装：<br><a href="https://npm.taobao.org/" target="_blank" rel="noopener">淘宝NPM 镜像</a></p>
+<p><img src="https://segmentfault.com/img/bVHCE0?w=946&h=204" alt="clipboard.png"></p>
+<h4 id="5、centos-和-ubuntu-下载安装命令"><a href="#5、centos-和-ubuntu-下载安装命令" class="headerlink" title="5、centos 和 ubuntu 下载安装命令"></a>5、centos 和 ubuntu 下载安装命令</h4><p>centos</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install lrzsz</span><br></pre></td></tr></table></figure>
+
+<p>ubuntu</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install -y lrzsz</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h1><h2 id="1-cat命令"><a href="#1-cat命令" class="headerlink" title="1.cat命令"></a>1.cat命令</h2><p>用于查看文件内容，结合|grep可以对单行文本进行过滤（即显示出含有过滤字符串的当前行）</p>
+<p>例子：cat test.txt |grep handsome</p>
+<p>注意：linux过滤用grep，windows则用findstr</p>
+<h2 id="2-echo-touch-open"><a href="#2-echo-touch-open" class="headerlink" title="2.echo/touch/open"></a>2.echo/touch/open</h2><p>用于创建文件和写文件</p>
+<p>用法：</p>
+<p>1）touch test.txt 创建test.txt文件</p>
+<p>2) open text.txt打开text.txt文件</p>
+<p>3）cat content &gt; text.txt 创建text.txt文件并写入content</p>
+<p>4）cat list &gt;&gt; text.txt 向text.txt追加内容list</p>
+<h2 id="3-adb-shell"><a href="#3-adb-shell" class="headerlink" title="3.adb shell"></a>3.adb shell</h2><p>1）adb shell dumpsys activity top 查看当前应用activity信息</p>
+<p>2）adb shell dumpsys package com.tencent.mm 查看指定包名应用的信息</p>
+<p>3）adb shell dumpsys meminfo [pname/pid] 查看指定进程名或进程ID对应的内存信息</p>
+<p>4）adb shell dumpsys dbinfo com.tencent.mm 查看指定包名的数据库存贮信息</p>
+<p>5）adb shell screencap -p /sdcard/t.png 截屏保存到设备</p>
+<p>6）adb shell screenrecord  –time-limit 5 /sdcard/demo.mp4 录屏保存到设备</p>
+<p>7）adb shell input text 123456 输入文本到输入框（密码，长文本用起来方便）</p>
+<p>8) adb install demo.apk 安装demo.apk,如果已经安装则用adb install -r demo.apk</p>
+<p>9) adb uninstall demo.apk 卸载demo.apk</p>
+<p>10) adb pull /sdcard/text.txt ~/ 把设备上的文件放到本地，可能会有权限问题需用chmod修改权限</p>
+<p>11）adb push ~/text.txt /sdcard/ 把本地的文件放到设备上面，可能会有权限问题需用chmod修改权限</p>
+<p>12）adb forward 【远端协议：端口号】【设备协议：端口号】</p>
+<p>13）adb jdwp 查看设备中可以被调试的进程号</p>
+<p>14) adb logcat -s tag 查看logcat日志</p>
+<h2 id="4-shell"><a href="#4-shell" class="headerlink" title="4.shell"></a>4.shell</h2><p>1) am start -D -n com.android.browser/com.android.browser.BrowserActivity 用Debug方式启动应用</p>
+<p>2）am startservice -n com.android.test/com.android.test.CusService 启动服务</p>
+<p>3）am broadcast -a com.android.intent.ACTION.LOGIN 发送广播</p>
+<p>4）netcfg 查看设备ip</p>
+<p>5）aapt dump xmltree /data/demo.apk activity_main.xml 查看xml资源内容</p>
+<p>6）dexdump /data/test.dex 查看dex文件的详细信息</p>
+<p>7）cat /proc/[pid]/maps 查看当前进程的内存映射信息，比如加载了那些so和dex等</p>
+<p>8）cat /proc/[pid]/status 查看当前进程的状态信息</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://res.wx.qq.com/voice/getvoice?mediaid=MzI1NzIxNDAxNF81MDI2ODExODM='></li>
+                        
+                    
+                        
+                            <li title='1' data-url='https://res.wx.qq.com/voice/getvoice?mediaid=MzI1NzIxNDAxNF81MDI2ODExODQ='></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
